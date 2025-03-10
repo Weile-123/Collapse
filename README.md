@@ -47,6 +47,9 @@ const App = () => {
         checked={0}
         titleFontSize={30}
         contentFontSize={20}
+        onChange={(checkIndex) => {
+          console.log(checkIndex);
+        }}
       />
     </div>
   );
@@ -60,10 +63,10 @@ const App = () => {
 <table class="table table-bordered table-striped">
     <thead>
     <tr>
-        <th style="width: 100px;">name</th>
-        <th style="width: 50px;">type</th>
-        <th>default</th>
-        <th>description</th>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 50px;">Type</th>
+        <th>Default</th>
+        <th>Description</th>
     </tr>
     </thead>
     <tbody>
@@ -130,6 +133,25 @@ const App = () => {
 </table>
 
 For details on DataItem[] default data construction, see Usage.
+
+### **Collapse Events**
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">Event</th>
+        <th>Description</th>
+        <th>Arguments</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>onChange</td>
+          <td>Emitted when switching panel,return index value</td>
+          <td>checkIndex: <span style="color:#07C160">Number</span></td>
+      </tr>
+    </tbody>
+</table>
 
 ## Author
 

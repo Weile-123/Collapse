@@ -16,10 +16,15 @@ interface CollapseProps {
     checked?: number | null,
     titleFontSize?: number,
     contentFontSize?: number,
+    onChange: (index: number) => void
 }
 
-const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked, titleFontSize, contentFontSize }: CollapseProps) => {
+const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked, titleFontSize, contentFontSize, onChange }: CollapseProps) => {
     const [openIndex, setOpenIndex] = useState<number | null>(checked ?? null);
+    const change = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+        onChange(index)
+    }
     return (
         <>
             {data &&
@@ -27,7 +32,7 @@ const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked
                     {data.map((item, index) => (
                         <div
                             key={index}
-                            onClick={() => { setOpenIndex(openIndex === index ? null : index) }}
+                            onClick={() => { change(index) }}
                             className='collapse'
                             style={{
                                 backgroundColor: bgColor,

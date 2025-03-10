@@ -16,7 +16,7 @@ interface CollapseProps {
     checked?: number | null,
     titleFontSize?: number,
     contentFontSize?: number,
-    onChange: (index: number) => void
+    onChange?: (index: number) => void
 }
 
 const Collapse = ({

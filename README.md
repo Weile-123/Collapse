@@ -1,6 +1,6 @@
 # weile-collapse 👋
 
-![Version](https://img.shields.io/badge/version-1.0.9-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.10-blue.svg?cacheSeconds=2592000)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 
 > react+ts collapse component

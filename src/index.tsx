@@ -46,15 +46,17 @@ const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked
                                 }}
                             >
                                 {item.title}
-                                <img
-                                    className="collapse_arrow_icon"
-                                    src={img || "/arrow_bottom.svg"}
-                                    alt=""
-                                    style={{
-                                        transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-                                        transition: `transform ${speed || 0.4}s`
-                                    }}
-                                />
+                                {img &&
+                                    <img
+                                        className="collapse_arrow_icon"
+                                        src={img}
+                                        alt=""
+                                        style={{
+                                            transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                            transition: `transform ${speed || 0.4}s`
+                                        }}
+                                    />
+                                }
                             </div>
                             <div className="collapse_content"
                                 style={{

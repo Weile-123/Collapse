@@ -1,6 +1,6 @@
 import React from "react"
 import { createRoot } from 'react-dom/client';
-import Collapse from '../../src/index'; // 引入组件
+import Collapse from '../../src/index';
 import './index.scss';
 
 

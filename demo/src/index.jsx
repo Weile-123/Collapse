@@ -13,19 +13,18 @@ const App = () => {
             content: "content2"
         },
         {
-            title: "title2",
-            content: "content2"
+            title: "title3",
+            content: "content3"
         },
         {
-            title: "title2",
-            content: "content2"
+            title: "title4",
+            content: "content4"
         }
     ]
     return (
         <div style={{width:"90%",margin:"0 auto"}}>
             <Collapse 
                 img="./react.svg" 
-                onChange={(checkIndex) => {console.log(checkIndex)}} 
                 data={data} 
                 bgColor="" 
                 titleColor="#000" 

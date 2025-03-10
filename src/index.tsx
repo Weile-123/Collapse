@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './index.scss'
 
 interface DataItem {
@@ -29,7 +29,7 @@ const Collapse = ({
     checked,
     titleFontSize,
     contentFontSize,
-    onChange
+    onChange = () => { }
 }: CollapseProps) => {
     const [openIndex, setOpenIndex] = useState<number | null>(checked ?? null);
     const change = (index) => {

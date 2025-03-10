@@ -1,0 +1,23 @@
+# 指定发布 npm 的时候需要忽略的文件和文件夹
+# npm 默认不会把 node_modules 发上去
+# dependencies
+/node_modules
+lib
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+
+作者：黑土豆
+链接：https://juejin.cn/post/7116710256482189348
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

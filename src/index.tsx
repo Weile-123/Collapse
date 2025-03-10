@@ -1,0 +1,74 @@
+import React, { useEffect, useState } from 'react';
+import './index.scss'
+
+interface DataItem {
+    title: string;
+    content: string;
+};
+
+interface CollapseProps {
+    data: DataItem[],
+    bgColor?: string,
+    titleColor?: string,
+    contentColor?: string,
+    img?: string,
+    speed?: number,
+    checked?: number | null,
+    titleFontSize?: number,
+    contentFontSize?: number,
+}
+
+const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked, titleFontSize, contentFontSize }: CollapseProps) => {
+    const [openIndex, setOpenIndex] = useState<number | null>(checked ?? null);
+    return (
+        <>
+            {data &&
+                <div className="">
+                    {data.map((item, index) => (
+                        <div
+                            key={index}
+                            onClick={() => { setOpenIndex(openIndex === index ? null : index) }}
+                            className='collapse'
+                            style={{
+                                backgroundColor: bgColor,
+                            }}
+                        >
+                            <div
+                                className="collapse_title"
+                                style={{
+                                    color: titleColor,
+                                    fontSize: `${titleFontSize}px`
+                                }}
+                            >
+                                {item.title}
+                                <img
+                                    className="collapse_arrow_icon"
+                                    src={img || "./arrow_bottom.svg"}
+                                    alt=""
+                                    style={{
+                                        transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                        transition: `transform ${speed || 0.4}s`
+                                    }}
+                                />
+                            </div>
+                            <div className="collapse_content"
+                                style={{
+                                    color: contentColor,
+                                    fontSize: `${contentFontSize}px`,
+                                    gridTemplateRows: openIndex === index ? "1fr" : "0fr",
+                                    opacity: openIndex === index ? '1' : '0',
+                                    transition: `grid-template-rows ${speed || 0.4}s, opacity ${speed || 0.4}s`,
+                                    pointerEvents: openIndex === index ? 'auto' : 'none'
+                                }}>
+                                <div className="collapse_content_overflow">
+                                    {item.content.trim()}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            }
+        </>
+    )
+}
+export default Collapse;

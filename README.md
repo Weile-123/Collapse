@@ -1,6 +1,6 @@
 # weile-collapse 👋
 
-![Version](https://img.shields.io/badge/version-1.0.6-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.7-blue.svg?cacheSeconds=2592000)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 
 > react+ts collapse component
@@ -84,19 +84,19 @@ const App = () => {
       <tr>
           <td>bgColor</td>
           <td>String<String></td>
-          <th>#292929</th>
+          <th>#f7f7f7</th>
           <td>Background color</td>
       </tr>
       <tr>
           <td>titleColor</td>
           <td>String</td>
-          <th>#ffffff</th>
+          <th>#000000</th>
           <td>Title color</td>
       </tr>
       <tr>
           <td>contentColor</td>
           <td>String</td>
-          <th>#cacaca</th>
+          <th>#404040</th>
           <td>contentColor</td>
       </tr>
       <tr>

@@ -1,6 +1,6 @@
 {
   "name": "weile-collapse",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react+ts collapse component",
   "main": "/src/index.tsx",
   "types": "/index.d.ts",

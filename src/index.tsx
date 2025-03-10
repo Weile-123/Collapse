@@ -19,7 +19,18 @@ interface CollapseProps {
     onChange: (index: number) => void
 }
 
-const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked, titleFontSize, contentFontSize, onChange }: CollapseProps) => {
+const Collapse = ({
+    data,
+    bgColor,
+    titleColor,
+    contentColor,
+    img,
+    speed,
+    checked,
+    titleFontSize,
+    contentFontSize,
+    onChange
+}: CollapseProps) => {
     const [openIndex, setOpenIndex] = useState<number | null>(checked ?? null);
     const change = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -52,7 +63,7 @@ const Collapse = ({ data, bgColor, titleColor, contentColor, img, speed, checked
                                         src={img}
                                         alt=""
                                         style={{
-                                            transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                            transform: openIndex === index ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%) rotate(0deg)',
                                             transition: `transform ${speed || 0.4}s`
                                         }}
                                     />

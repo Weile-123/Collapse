@@ -1,8 +1,6 @@
 import React from "react"
 import { createRoot } from 'react-dom/client';
 import Collapse from '../../src/index';
-import './index.scss';
-
 
 const App = () => {
     const data = [
@@ -25,7 +23,18 @@ const App = () => {
     ]
     return (
         <div style={{width:"90%",margin:"0 auto"}}>
-            <Collapse onChange={(checkIndex) => {console.log(checkIndex)}} data={data} bgColor="#101010" contentColor="#e0e0e0" titleColor="#fff" speed={0.4} checked={0} titleFontSize={30} />
+            <Collapse 
+                img="./react.svg" 
+                onChange={(checkIndex) => {console.log(checkIndex)}} 
+                data={data} 
+                bgColor="" 
+                titleColor="#000" 
+                contentColor="#404040" 
+                speed={0.4} 
+                checked={0} 
+                titleFontSize={30} 
+                contentFontSize={20} 
+            />
         </div>
     );
 }
